@@ -9,6 +9,7 @@ import {
   RiLogoutBoxLine,
   RiMenu3Fill,
   RiCloseLine,
+  RiSendPlaneFill,
 } from "react-icons/ri";
 
 function App() {
@@ -136,6 +137,14 @@ function App() {
       >
         {menu ? <RiCloseLine /> : <RiMenu3Fill />}
       </button>
+      {/* Header */}
+      <header className="bg-white fixed lg:ml-96 w-full lg:w-[calc(100%-384px)] border-b p-8 flex items-center justify-between">
+        <h1 className="text-3xl font-bold">Messages</h1>
+        <button className="flex items-center gap-4 border text-blue-900 font-bold p-4 rounded-lg">
+          <RiSendPlaneFill />
+          New Message
+        </button>
+      </header>
     </div>
   );
 }
