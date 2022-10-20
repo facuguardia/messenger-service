@@ -10,7 +10,9 @@ import {
   RiMenu3Fill,
   RiCloseLine,
   RiSendPlaneFill,
+  RiSearchLine,
 } from "react-icons/ri";
+import { AiOutlineCopy } from "react-icons/ai";
 
 function App() {
   const [menu, setMenu] = useState(false);
@@ -23,7 +25,7 @@ function App() {
     <div className="min-h-screen ">
       {/* // sidebar */}
       <div
-        className={`bg-white fixed w-6/8 md:w-96 h-full border-r p-8 flex flex-col justify-between overflow-y-scroll transition-all duration-700 lg:left-0 ${
+        className={`bg-white fixed w-6/8 md:w-96 h-full border-r p-8 flex flex-col justify-between overflow transition-all duration-700 lg:left-0 z-50 ${
           menu ? "left-0" : "-left-full"
         }`}
       >
@@ -138,12 +140,26 @@ function App() {
         {menu ? <RiCloseLine /> : <RiMenu3Fill />}
       </button>
       {/* Header */}
-      <header className="bg-white fixed lg:ml-96 w-full lg:w-[calc(100%-384px)] border-b p-8 flex items-center justify-between">
-        <h1 className="text-3xl font-bold">Messages</h1>
-        <button className="flex items-center gap-4 border text-blue-900 font-bold p-4 rounded-lg">
-          <RiSendPlaneFill />
-          New Message
-        </button>
+      <header className="bg-white fixed lg:ml-96 w-full lg:w-[calc(100%-384px)] border-b">
+        <div className=" flex items-center justify-between p-8">
+          <h1 className="text-3xl font-bold">Messages</h1>
+          <button className="flex items-center gap-4 border text-blue-900 font-bold p-4 rounded-lg">
+            <RiSendPlaneFill />
+            New Message
+          </button>
+        </div>
+        <div className="bg-gray-100 grid grid-cols-1 md:grid-cols-4 p-4">
+          <form className="col-span-1 p-4 border-r ">
+            <div className="relative">
+            <RiSearchLine className="text-blue-900 absolute top-1 translate-y-1/2  left-2"/>
+              <input type="text" className="bg-white w-full py-2 px-10 outline-none rounded-lg border border-transparent focus:border-blue-700" placeholder="Search" />
+            </div>
+          </form>
+          <div className="col-span-3 p-4 flex items-center justify-between">
+            <h3 className="">Error code CR045</h3>
+            <p className="flex items-center gap-2 text-blue-900 "> <span className="text-gray-500">Transaction</span>123456{" "}<AiOutlineCopy className="hover:cursor-pointer text-xl"/></p>
+          </div>
+        </div>
       </header>
     </div>
   );
