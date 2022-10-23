@@ -136,12 +136,12 @@ function App() {
       {/* Button Menu Movil */}
       <button
         onClick={toggleMenu}
-        className="lg:hidden fixed bottom-6 right-6 border p-3 rounded-full bg-white "
+        className="lg:hidden fixed bottom-6 right-6 border p-3 rounded-full bg-white z-[9999]"
       >
         {menu ? <RiCloseLine /> : <RiMenu3Fill />}
       </button>
       {/* Header */}
-      <header className="bg-white fixed lg:ml-96 w-full lg:w-[calc(100%-384px)] border-b">
+      <header className="bg-white fixed lg:ml-96 w-full lg:w-[calc(100%-384px)] border-b z-[10]">
         <div className=" flex items-center justify-between p-8">
           <h1 className="text-3xl font-bold">Messages</h1>
           <button className="flex items-center gap-4 border text-blue-900 font-bold p-4 rounded-lg">
@@ -171,8 +171,8 @@ function App() {
         </div>
       </header>
       {/* Main */}
-      <main className="lg:ml-96 pt-60 h-screen lg:w-[calc(100%-384px)] grid grid-cols-1 lg:grid-cols-4">
-        <ul className="col-span-1 border-r p-4 h-full max-h-full overflow-y-scroll">
+      <main className="lg:ml-96 pt-40 lg:pt-30 h-screen lg:w-[calc(100%-384px)] grid grid-cols-1 lg:grid-cols-4">
+        <ul className="hidden lg:block col-span-1 border-r p-4 h-screen lg:h-full max-h-full overflow-y-scroll">
           <li>
             <a href="#" className="hover:bg-gray-100 block rounded-lg p-2">
               <h5 className="font-bold flex items-center gap-4">
@@ -243,60 +243,102 @@ function App() {
           </li>
         </ul>
         {/* Container */}
-        <div className="col-span-3 relative p-4 h-full overflow-y-scroll">
-          <div className="flex justify-center">
-            <p className="text-center border py-2 px-4 my-6 rounded-full font-bold">
-              Yesterday
-            </p>
-          </div>
-          {/* Message 1 */}
-          <div className="flex items-start gap-4">
-            <span className="bg-blue-100 py-2 px-[10px] rounded-full text-blue-900 font-bold">
-              JC
-            </span>
-            <div className="">
-              <p className="border p-3 bg-gray-100 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                quos sapiente nam eum voluptatum alias corrupti? Debitis magnam
-                adipisci laborum voluptas similique quae voluptatibus
-                perspiciatis sint, minus ipsa corporis doloribus labore
-                consequuntur eligendi quo numquam provident! Tempore provident
-                illo eum!Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Unde quos sapiente nam eum voluptatum alias corrupti?
-                Debitis magnam adipisci laborum voluptas similique quae
-                voluptatibus.
+        <div className="col-span-1 lg:col-span-3 relative p-4 max-h-full overflow-y-scroll">
+          <div className="h-full lg:h-[600px] overflow-y-scroll pt-20 md:pt-10   lg:pb-10 ">
+            <div className="flex justify-center">
+              <p className="text-center border py-2 px-4 my-6 rounded-full font-bold">
+                Yesterday
               </p>
-              <span className="text-xs text-gray-400 pt-2">
-                Yesterday, 14:35 hrs
+            </div>
+            {/* Message 1 */}
+            <div className="flex items-start gap-4">
+              <span className="bg-blue-100 py-2 px-[10px] rounded-full text-blue-900 font-bold">
+                JC
               </span>
+              <div className="">
+                <p className="border p-3 bg-gray-100 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quos sapiente nam eum voluptatum alias corrupti? Debitis
+                  magnam adipisci laborum voluptas similique quae voluptatibus
+                  perspiciatis sint, minus ipsa corporis doloribus labore
+                  consequuntur eligendi quo numquam provident! Tempore provident
+                  illo eum!Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Unde quos sapiente nam eum voluptatum alias corrupti?
+                  Debitis magnam adipisci laborum voluptas similique quae
+                  voluptatibus.
+                </p>
+                <span className="text-xs text-gray-400 pt-2">
+                  Yesterday, 14:35 hrs
+                </span>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <p className="text-center border py-2 px-4 my-6 rounded-full font-bold">
+                Today
+              </p>
+            </div>
+            {/* Message 2 */}
+            <div className="flex items-start gap-4 flex-row-reverse">
+              <span className="bg-blue-100 py-2 px-[10px] rounded-full text-blue-900 font-bold">
+                FG
+              </span>
+              <div className="">
+                <p className="border p-3 bg-blue-700 text-white  rounded-tl-2xl rounded-br-2xl rounded-bl-2xl ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                </p>
+                <span className="flex flex-row-reverse text-xs text-gray-400 pt-2">
+                  12 diciembre 2022, 10:00 hrs
+                </span>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 flex-row-reverse">
+              <span className="bg-blue-100 py-2 px-[10px] rounded-full text-blue-900 font-bold">
+                FG
+              </span>
+              <div className="">
+                <p className="border p-3 bg-blue-700 text-white  rounded-tl-2xl rounded-br-2xl rounded-bl-2xl ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                </p>
+                <span className="flex flex-row-reverse text-xs text-gray-400 pt-2">
+                  12 diciembre 2022, 10:00 hrs
+                </span>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 flex-row-reverse">
+              <span className="bg-blue-100 py-2 px-[10px] rounded-full text-blue-900 font-bold">
+                FG
+              </span>
+              <div className="">
+                <p className="border p-3 bg-blue-700 text-white  rounded-tl-2xl rounded-br-2xl rounded-bl-2xl ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                </p>
+                <span className="flex flex-row-reverse text-xs text-gray-400 pt-2">
+                  12 diciembre 2022, 10:00 hrs
+                </span>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 flex-row-reverse">
+              <span className="bg-blue-100 py-2 px-[10px] rounded-full text-blue-900 font-bold">
+                FG
+              </span>
+              <div className="">
+                <p className="border p-3 bg-blue-700 text-white  rounded-tl-2xl rounded-br-2xl rounded-bl-2xl ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                </p>
+                <span className="flex flex-row-reverse text-xs text-gray-400 pt-2">
+                  12 diciembre 2022, 10:00 hrs
+                </span>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center">
-            <p className="text-center border py-2 px-4 my-6 rounded-full font-bold">
-              Today
-            </p>
-          </div>
-          {/* Message 2 */}
-          <div className="flex items-start gap-4 flex-row-reverse">
-            <span className="bg-blue-100 py-2 px-[10px] rounded-full text-blue-900 font-bold">
-              FG
-            </span>
-            <div className="">
-              <p className="border p-3 bg-blue-700 text-white  rounded-tl-2xl rounded-br-2xl rounded-bl-2xl ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-              </p>
-              <span className="flex flex-row-reverse text-xs text-gray-400 pt-2">
-                12 diciembre 2022, 10:00 hrs
-              </span>
-            </div>
-          </div>
+
           {/* Send message */}
-          <form className="bg-gray-200 absolute w-full bottom-0 left-0 p-6  ">
+          <form className="bg-gray-200 w-full bottom-0 left-0 p-6">
             <div className="relative">
-              <RiSendPlaneFill className=" absolute right-4 top-1/2 -translate-y-1/2 text-[20px] hover:cursor-pointer" />
+              <RiSendPlaneFill className="lg:right-5 md:right-18 right-10 top-1/2 absolute -translate-y-1/2 text-[20px] hover:cursor-pointer" />
               <input
                 type="text"
-                className="bg-white w-full outline-none py-2 pl-6 pr-10  rounded-full border border-transparent focus:border-blue-700"
+                className="bg-white lg:w-full md:w-[710px] w-[280px] outline-none py-2 pl-6 pr-10 rounded-full border border-transparent focus:border-blue-700"
                 placeholder="Write your message"
               />
             </div>
