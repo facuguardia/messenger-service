@@ -1,4 +1,5 @@
-Como ejecutarlo
+### Como ejecutarlo
+
 Necesitarás tener instalado node.js a partir de la versión 14 y tener acceso a una terminal para seguir los siguientes pasos:
 
 - Necesitamos clonar el proyecto añadiendo la siguiente linea de comando en una terminal
