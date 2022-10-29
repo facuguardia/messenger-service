@@ -4,10 +4,14 @@
 
 - Clonar el proyecto.
 
-- Una vez dentro del proyecto en VScode, abrimos terminal y corremos npm install.
+- Una vez dentro del proyecto en VScode, abrimos terminal y corremos el comando "npm install".
 
 #
-Desplegamos nuestro proyecto con npm run dev
+
+### Como desplegarlo:
+
+- Abrimos nuevamente una terminal y corremos el comando "npm run dev"
+
 #
 
 💻 En computadora
