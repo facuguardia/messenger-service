@@ -6,7 +6,7 @@ Necesitarás tener instalado node.js a partir de la versión 14 y tener acceso a
 - Entramos a la carpeta que acabamos de clonar e instalamos las dependencias necesarias
 npm install
 #
-Ejecutamos nuestro proyecto en local
+Ejecutamos nuestro proyecto con
 npm run dev
 #
 
