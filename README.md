@@ -14,6 +14,15 @@
 
 #
 
+### Tecnologías utilizadas:
+
+- Vite Js.
+- React Js.
+- Tailwind Css.
+- React Icons.
+
+#
+
 💻 En computadora
 
 [![message.jpg](https://i.postimg.cc/65TV7p2X/message.jpg)](https://postimg.cc/3d50V7FS)
