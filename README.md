@@ -1,14 +1,12 @@
 ### Como ejecutarlo
 
-Necesitarás tener instalado node.js a partir de la versión 14 y tener acceso a una terminal para seguir los siguientes pasos:
+- Necesitarás tener instalado node.js a partir de la versión 14
 
-- Necesitamos clonar el proyecto añadiendo la siguiente linea de comando en una terminal
+- Clonar el proyecto 
 
-- Entramos a la carpeta que acabamos de clonar e instalamos las dependencias necesarias
-npm install
+- Una vez dentro del proyecto en VScode, abrimos terminal y corremos npm install
 #
-Ejecutamos nuestro proyecto con
-npm run dev
+Ejecutamos nuestro proyecto con npm run dev
 #
 
 💻 En computadora
